@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(".././images/work_desk.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.content{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    background: rgba(132, 132, 136, 0.486);
+    line-height: 0.5;
+}
+.title{
+    font-size: 4em;
+    color: aliceblue;
+    line-height: 2;
+}
+.title-coming_soon{
+    font-size: 4em;
+    color: aliceblue;
+    line-height: 2;
+}
+
+.parag_quote{
+    font-size: 1.5em;
+    color: aliceblue;
+    line-height: 3;
+}
+span{
+    position: relative;
+    padding: 15px;
+    background-color: rgb(17, 18, 24);
+    border-radius: 5px;
+}
+.content>div>.title {
+    animation: bounceInDown 3000ms ease-out both
+}
+@keyframes bounceInDown {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, 5px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
