@@ -6,8 +6,8 @@ body {
 .navbg{
 	background-color:#141723;
 	display: flex;
-	 margin: 0; 
-	   top: 0;
+	margin: 0; 
+	top: 0;
   width: 100%;
 }
 @media only screen and (max-width: 600px) {
@@ -110,17 +110,11 @@ body {
     }
 
 .container2 {
-    /*show heigh: auto*/
-    height: 55vh; 
- 	display: flex;
+  position: relative;
+  height: 55vh; 
  	flex-wrap: wrap;
-    background-color:#141723; 
-    background-image: url('./img/coding.gif');
-    background-position: 50% 35%;
-    background-repeat: no-repeat;
-     background-size: cover;
-   opacity: .9  /*justify-content: space-around;*/
-    
+  background-color:#141723; 
+  z-index: 99;
 }
 .wwa{
 	padding-top:4rem;
@@ -139,9 +133,20 @@ body {
 	opacity: 1;
 }
 .codingimg{
-	margin-top:5vh;
-	width:50%;
-	height: 50%;
+  position: absolute;
+  top:0;
+  left: 0;
+	width:100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.2;
+}
+.cont2-block{
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
 }
 
 input[type=text], input[type=email],textarea {
@@ -185,10 +190,38 @@ input[type=text], input[type=email],textarea {
   }
   
 
-  .row1:after {
-    content: "";
-    display: table;
-    clear: both;
+  .row1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+
+  }
+  .contact-us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    padding: 5px;
+  }
+
+  .contact_form_div{
+    margin-top: 7%;
+    padding: 40px;
+  }
+
+form{
+  position: relative;
+  text-align: center;
+  height: 50vh;
+  }
+  .submit-btn{
+    margin-top: 2%;
+    position: relative !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
   }
 
   @media screen and (max-width: 600px) {
@@ -201,4 +234,7 @@ input[type=text], input[type=email],textarea {
         float: left;
         margin-top: 10px;
     }
+    form{
+      width: 95%;
+      }
   }
